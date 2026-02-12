@@ -1,18 +1,397 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Suntram.digital</title>
+  <meta name="description" content="SUNTRAM Digital — soluciones empresariales en México: desarrollo web y móvil, diseño, impresión, eventos, sistemas (Odoo/Oracle), marketing y soluciones con IA para impulsar ventas." />
+  <title>SUNTRAM Digital | Soluciones empresariales</title>
+
+  <meta property="og:title" content="SUNTRAM Digital | Soluciones empresariales" />
+  <meta property="og:description" content="Web, apps, diseño, impresión, eventos, sistemas (Odoo/Oracle), marketing y soluciones con IA para ventas." />
+  <meta property="og:type" content="website" />
+
   <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <main class="wrap">
-    <h1>Hola mundo</h1>
-    <p>Repo inicial para la landing de <b>suntram.digital</b>.</p>
-    <button id="btn">Probar JS</button>
-    <p id="out" class="muted"></p>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Ir al inicio">
+        <img class="brand__logo" src="assets/logo-suntram-digital.jpg" alt="SUNTRAM Digital" />
+      </a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <button class="nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="nav-links">
+          <span class="nav__toggleIcon" aria-hidden="true"></span>
+          <span class="sr">Menú</span>
+        </button>
+
+        <div class="nav__links" id="nav-links" data-nav-links>
+          <a href="#servicios">Servicios</a>
+          <a href="#ai">IA</a>
+          <a href="#proceso">Proceso</a>
+          <a href="#contacto" class="btn btn--sm">Cotizar</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__fx" aria-hidden="true">
+        <div class="blob blob--a"></div>
+        <div class="blob blob--b"></div>
+        <div class="gridlines"></div>
+      </div>
+
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="kicker" data-reveal>Soluciones empresariales · México</p>
+          <h1 data-reveal>Impulsa ventas y operación con diseño, tecnología e IA.</h1>
+          <p class="lead" data-reveal>
+            <b>SUNTRAM Digital</b> integra <b>web</b>, <b>apps</b>, <b>sistemas</b>, <b>marketing</b> y <b>automatización con IA</b>
+            para que tu empresa crezca con procesos claros y métricas.
+          </p>
+
+          <div class="hero__cta" data-reveal>
+            <a class="btn" href="#contacto">Pedir cotización</a>
+            <a class="btn btn--ghost" href="#servicios">Ver servicios</a>
+          </div>
+
+          <div class="hero__trust" aria-label="Áreas de experiencia" data-reveal>
+            <div class="pill">Web & eCommerce</div>
+            <div class="pill">Apps móviles</div>
+            <div class="pill">ERP & Sistemas</div>
+            <div class="pill">Marketing & Contenido</div>
+            <div class="pill">IA & Automatización</div>
+          </div>
+
+          <div class="metrics" data-reveal>
+            <div class="metric">
+              <div class="metric__num" data-count-to="28">0</div>
+              <div class="metric__label">Entregables / mes (capacidad)</div>
+            </div>
+            <div class="metric">
+              <div class="metric__num" data-count-to="7">0</div>
+              <div class="metric__label">Días para MVP (según alcance)</div>
+            </div>
+            <div class="metric">
+              <div class="metric__num" data-count-to="100">0</div>
+              <div class="metric__label">% medible (leads/ventas)</div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero__showcase" aria-label="Demostración visual" data-reveal>
+          <div class="showcase">
+            <div class="showcase__top">
+              <div class="dot dot--r"></div><div class="dot dot--y"></div><div class="dot dot--g"></div>
+              <div class="showcase__title">Tablero de crecimiento</div>
+              <img class="spark" src="assets/spark.svg" alt="" aria-hidden="true" />
+            </div>
+
+            <div class="showcase__body">
+              <div class="kpi">
+                <div class="kpi__label">Leads</div>
+                <div class="kpi__value"><span data-count-to="312">0</span> <span class="kpi__delta">+18%</span></div>
+              </div>
+              <div class="kpi">
+                <div class="kpi__label">Conversión</div>
+                <div class="kpi__value"><span data-count-to="4">0</span>.<span data-count-to="7">0</span>%</div>
+              </div>
+              <div class="kpi">
+                <div class="kpi__label">Costo/lead</div>
+                <div class="kpi__value">$<span data-count-to="29">0</span> MXN</div>
+              </div>
+
+              <div class="bars" aria-hidden="true">
+                <div class="bar" style="--h:62%"></div>
+                <div class="bar" style="--h:35%"></div>
+                <div class="bar" style="--h:78%"></div>
+                <div class="bar" style="--h:54%"></div>
+                <div class="bar" style="--h:88%"></div>
+                <div class="bar" style="--h:70%"></div>
+              </div>
+
+              <div class="chips">
+                <span class="chip">Web</span>
+                <span class="chip">Ads</span>
+                <span class="chip">Contenido</span>
+                <span class="chip">CRM</span>
+                <span class="chip">IA</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="hero__wave" aria-hidden="true">
+        <img src="assets/wave.svg" alt="" />
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="section" id="servicios">
+      <div class="container">
+        <header class="section__head" data-reveal>
+          <h2>Lo que hacemos (de verdad)</h2>
+          <p>Que se vea y que funcione: diseño, producción, sistemas y ventas. Todo medible.</p>
+        </header>
+
+        <div class="grid cards" data-reveal>
+          <article class="service">
+            <div class="service__icon" aria-hidden="true">⌁</div>
+            <h3>Web & Landing Pages</h3>
+            <p>Diseño premium, velocidad, SEO técnico y conversión. Formularios, CRM y analítica listos.</p>
+            <ul class="bullets">
+              <li>UI/UX + copy</li>
+              <li>Performance + SEO</li>
+              <li>Medición y eventos</li>
+            </ul>
+          </article>
+
+          <article class="service">
+            <div class="service__icon" aria-hidden="true">▣</div>
+            <h3>Apps móviles</h3>
+            <p>Apps para vender y operar: clientes, pedidos, reportes, flujos internos y seguimiento.</p>
+            <ul class="bullets">
+              <li>iOS/Android (según alcance)</li>
+              <li>APIs y backend</li>
+              <li>Soporte y mejoras</li>
+            </ul>
+          </article>
+
+          <article class="service">
+            <div class="service__icon" aria-hidden="true">⚙</div>
+            <h3>Sistemas empresariales</h3>
+            <p>Integraciones, paneles, automatización, inventarios, ventas, facturación y reportes.</p>
+            <ul class="bullets">
+              <li>Software a la medida</li>
+              <li>Integraciones con ERP</li>
+              <li>Dashboards operativos</li>
+            </ul>
+          </article>
+
+          <article class="service">
+            <div class="service__icon" aria-hidden="true">✦</div>
+            <h3>Diseño & Branding</h3>
+            <p>Identidad visual, piezas para campañas, presentaciones y contenido para redes.</p>
+            <ul class="bullets">
+              <li>Brand system</li>
+              <li>Plantillas editables</li>
+              <li>Creativos para Ads</li>
+            </ul>
+          </article>
+
+          <article class="service">
+            <div class="service__icon" aria-hidden="true">▦</div>
+            <h3>Impresión, eventos y stands</h3>
+            <p>Producción integral: impresos, señalética, displays, backings, stands y montaje.</p>
+            <ul class="bullets">
+              <li>Calidad + tiempos</li>
+              <li>Formatos y acabados</li>
+              <li>Logística (según proyecto)</li>
+            </ul>
+          </article>
+
+          <article class="service">
+            <div class="service__icon" aria-hidden="true">▲</div>
+            <h3>Marketing digital</h3>
+            <p>Campañas, contenido, pauta y optimización. Enfocado a ventas, no a likes.</p>
+            <ul class="bullets">
+              <li>Meta / Google Ads</li>
+              <li>Funnels y remarketing</li>
+              <li>Reportes por KPI</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI -->
+    <section class="section section--alt" id="ai">
+      <div class="container">
+        <header class="section__head" data-reveal>
+          <h2>Soluciones con IA (para empresas y emprendimientos)</h2>
+          <p>Automatiza, responde más rápido, vende mejor y reduce costos operativos.</p>
+        </header>
+
+        <div class="grid aiGrid" data-reveal>
+          <article class="aiCard">
+            <h3>Asistente de ventas (WhatsApp / Web)</h3>
+            <p>Respuestas instantáneas, calificación de leads, cotizaciones y agendado.</p>
+            <div class="aiTags">
+              <span>24/7</span><span>Lead scoring</span><span>CRM</span>
+            </div>
+          </article>
+          <article class="aiCard">
+            <h3>Generación de contenido</h3>
+            <p>Calendario, copies, guiones, piezas y variantes para campañas (con aprobación humana).</p>
+            <div class="aiTags">
+              <span>Reels</span><span>Ads</span><span>Blog</span>
+            </div>
+          </article>
+          <article class="aiCard">
+            <h3>Automatización de procesos</h3>
+            <p>Flujos con IA + reglas: tickets, seguimiento, reportes, emails y extracción de datos.</p>
+            <div class="aiTags">
+              <span>Workflows</span><span>Integraciones</span><span>Reportes</span>
+            </div>
+          </article>
+          <article class="aiCard">
+            <h3>Analítica y dashboards</h3>
+            <p>Tableros con métricas reales: CAC, ROAS, conversión, pipeline y rendimiento.</p>
+            <div class="aiTags">
+              <span>KPI</span><span>Ventas</span><span>Operación</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="ctaBand" data-reveal>
+          <div>
+            <h3>Objetivo: impulso de ventas</h3>
+            <p>Armamos un paquete: landing + ads + automatización + CRM para cerrar más rápido.</p>
+          </div>
+          <a class="btn" href="#contacto">Quiero impulsar ventas</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESO -->
+    <section class="section" id="proceso">
+      <div class="container">
+        <header class="section__head" data-reveal>
+          <h2>Proceso</h2>
+          <p>Diseño, ejecución y optimización. Sin humo: entregables y fechas.</p>
+        </header>
+
+        <ol class="steps" data-reveal>
+          <li>
+            <div class="step__num">1</div>
+            <div>
+              <h3>Diagnóstico</h3>
+              <p>Objetivo, oferta, cliente ideal, presupuesto y medición (leads/ventas/costo).</p>
+            </div>
+          </li>
+          <li>
+            <div class="step__num">2</div>
+            <div>
+              <h3>Diseño & propuesta</h3>
+              <p>Arquitectura, copy, diseño y plan (web/apps/sistemas/marketing/IA).</p>
+            </div>
+          </li>
+          <li>
+            <div class="step__num">3</div>
+            <div>
+              <h3>Construcción</h3>
+              <p>Desarrollo, integraciones, pruebas, performance y preparación de lanzamiento.</p>
+            </div>
+          </li>
+          <li>
+            <div class="step__num">4</div>
+            <div>
+              <h3>Lanzamiento + mejora</h3>
+              <p>Deploy, campañas, dashboards y optimización por datos.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section section--alt" id="contacto">
+      <div class="container">
+        <header class="section__head" data-reveal>
+          <h2>Contacto</h2>
+          <p>Cuéntanos qué necesitas y te respondemos con una ruta clara.</p>
+        </header>
+
+        <div class="contact" data-reveal>
+          <form class="form" data-contact-form>
+            <div class="row">
+              <label>
+                <span>Nombre</span>
+                <input name="name" type="text" autocomplete="name" required />
+              </label>
+              <label>
+                <span>Empresa</span>
+                <input name="company" type="text" autocomplete="organization" />
+              </label>
+            </div>
+
+            <div class="row">
+              <label>
+                <span>Email</span>
+                <input name="email" type="email" autocomplete="email" required />
+              </label>
+              <label>
+                <span>Teléfono / WhatsApp</span>
+                <input name="phone" type="tel" autocomplete="tel" />
+              </label>
+            </div>
+
+            <label>
+              <span>¿Qué necesitas?</span>
+              <select name="need">
+                <option>Impulso de ventas (landing + ads + automatización)</option>
+                <option>Landing / Sitio web</option>
+                <option>eCommerce</option>
+                <option>App móvil</option>
+                <option>Sistema a la medida</option>
+                <option>ERP (Odoo/Oracle)</option>
+                <option>IA (asistente / automatización / contenido)</option>
+                <option>Diseño / Branding</option>
+                <option>Impresión / Eventos / Stands</option>
+                <option>Otro</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Mensaje</span>
+              <textarea name="message" rows="5" placeholder="Describe objetivo, fechas, presupuesto aproximado y referencias (si tienes)." required></textarea>
+            </label>
+
+            <div class="form__actions">
+              <button class="btn" type="submit">Enviar</button>
+              <p class="tiny muted">Esto abre tu cliente de correo (mailto). Luego lo conectamos a CRM/WhatsApp/IA.</p>
+            </div>
+
+            <p class="form__status" data-form-status role="status" aria-live="polite"></p>
+          </form>
+
+          <aside class="contactCard">
+            <h3>Paquetes típicos</h3>
+            <p class="muted">Elegimos el paquete que más impacto tenga en 30–45 días.</p>
+            <ul class="bullets">
+              <li>Landing + Ads + seguimiento + dashboard</li>
+              <li>Web + SEO + automatización de leads</li>
+              <li>Contenido + pauta + reportes</li>
+              <li>ERP + integraciones + soporte</li>
+            </ul>
+            <div class="divider"></div>
+            <p class="tiny">Si ya tienes dominio/hosting, trabajamos sobre tu infraestructura actual.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="muted">© <span data-year></span> SUNTRAM Digital · Soluciones empresariales</p>
+      <div class="footer__links">
+        <a href="#top">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#ai">IA</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
