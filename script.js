@@ -3,6 +3,7 @@
    - Scroll reveal
    - Animated counters
    - Contact form -> mailto
+   - Service drawer modal
 */
 
 (function () {
@@ -65,8 +66,7 @@
 
     function tick(now) {
       const t = Math.min(1, (now - start) / dur);
-      // easeOutCubic
-      const eased = 1 - Math.pow(1 - t, 3);
+      const eased = 1 - Math.pow(1 - t, 3); // easeOutCubic
       const val = Math.round(from + (to - from) * eased);
       el.textContent = String(val);
       if (t < 1) requestAnimationFrame(tick);
@@ -124,7 +124,6 @@
         message,
       ];
 
-      // TODO: confirmar email real
       const to = 'contacto@suntram.digital';
       const body = encodeURIComponent(lines.join('\n'));
 
@@ -132,4 +131,62 @@
       window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
     });
   }
+
+  // Service drawer modal
+  const modal = document.querySelector('[data-modal]');
+  const modalTitle = document.querySelector('[data-modal-title]');
+  const modalKicker = document.querySelector('[data-modal-kicker]');
+  const modalBody = document.querySelector('[data-modal-body]');
+
+  let lastFocus = null;
+
+  const serviceTitles = {
+    web: 'Web & Landing Pages',
+    apps: 'Apps móviles',
+    systems: 'Sistemas empresariales',
+    design: 'Diseño & Branding',
+    print: 'Impresión, eventos y stands',
+    mkt: 'Marketing digital',
+  };
+
+  function openModal(serviceKey) {
+    if (!modal || !modalBody || !modalTitle) return;
+    const src = document.querySelector(`[data-service-detail="${serviceKey}"]`);
+    if (!src) return;
+
+    lastFocus = document.activeElement;
+
+    modalKicker.textContent = 'Servicio';
+    modalTitle.textContent = serviceTitles[serviceKey] || 'Detalle';
+    modalBody.innerHTML = '';
+    modalBody.appendChild(src.cloneNode(true));
+
+    modal.hidden = false;
+    document.documentElement.style.overflow = 'hidden';
+
+    const closeBtn = modal.querySelector('[data-modal-close]');
+    if (closeBtn) closeBtn.focus();
+  }
+
+  function closeModal() {
+    if (!modal) return;
+    modal.hidden = true;
+    document.documentElement.style.overflow = '';
+    if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
+  }
+
+  document.querySelectorAll('[data-open-service]').forEach((b) => {
+    b.addEventListener('click', () => {
+      const key = b.getAttribute('data-open-service');
+      if (key) openModal(key);
+    });
+  });
+
+  document.querySelectorAll('[data-modal-close]').forEach((el) => {
+    el.addEventListener('click', closeModal);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal && !modal.hidden) closeModal();
+  });
 })();

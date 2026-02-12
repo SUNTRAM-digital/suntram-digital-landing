@@ -21,7 +21,10 @@
   <header class="header" id="top">
     <div class="container header__inner">
       <a class="brand" href="#top" aria-label="Ir al inicio">
-        <img class="brand__logo" src="assets/logo-suntram-digital.jpg" alt="SUNTRAM Digital" />
+        <span class="brand__mark" aria-hidden="true">
+          <img class="brand__logo" src="assets/logo-suntram-digital.jpg" alt="" />
+        </span>
+        <span class="brand__word">SUNTRAM Digital</span>
       </a>
 
       <nav class="nav" aria-label="Navegación principal">
@@ -47,6 +50,7 @@
         <div class="blob blob--a"></div>
         <div class="blob blob--b"></div>
         <div class="gridlines"></div>
+        <div class="dots"></div>
       </div>
 
       <div class="container hero__grid">
@@ -139,75 +143,123 @@
     <section class="section" id="servicios">
       <div class="container">
         <header class="section__head" data-reveal>
-          <h2>Lo que hacemos (de verdad)</h2>
-          <p>Que se vea y que funcione: diseño, producción, sistemas y ventas. Todo medible.</p>
+          <h2>Lo que hacemos (y qué incluye)</h2>
+          <p>Todo se cotiza por separado según objetivo, alcance y tiempos. Aquí están los subproductos más solicitados y entregables típicos.</p>
         </header>
 
         <div class="grid cards" data-reveal>
-          <article class="service">
-            <div class="service__icon" aria-hidden="true">⌁</div>
-            <h3>Web & Landing Pages</h3>
-            <p>Diseño premium, velocidad, SEO técnico y conversión. Formularios, CRM y analítica listos.</p>
-            <ul class="bullets">
-              <li>UI/UX + copy</li>
-              <li>Performance + SEO</li>
-              <li>Medición y eventos</li>
+          <article class="service service--web" data-service="web">
+            <div class="service__top">
+              <div class="service__icon" aria-hidden="true">⌁</div>
+              <div>
+                <h3>Web & Landing Pages</h3>
+                <p>Diseño y desarrollo enfocados a conversión: rápido, medible y listo para captar leads.</p>
+              </div>
+            </div>
+            <ul class="serviceList">
+              <li><b>SEO técnico</b> + performance</li>
+              <li><b>GA4 + GTM</b> + tracking de eventos</li>
+              <li><b>Formularios</b> + WhatsApp + CRM</li>
             </ul>
+            <div class="service__actions">
+              <button class="btn btn--ghost btn--sm" type="button" data-open-service="web">Ver detalle</button>
+              <a class="btn btn--sm" href="#contacto">Cotizar</a>
+            </div>
           </article>
 
-          <article class="service">
-            <div class="service__icon" aria-hidden="true">▣</div>
-            <h3>Apps móviles</h3>
-            <p>Apps para vender y operar: clientes, pedidos, reportes, flujos internos y seguimiento.</p>
-            <ul class="bullets">
-              <li>iOS/Android (según alcance)</li>
-              <li>APIs y backend</li>
-              <li>Soporte y mejoras</li>
+          <article class="service service--apps" data-service="apps">
+            <div class="service__top">
+              <div class="service__icon" aria-hidden="true">▣</div>
+              <div>
+                <h3>Apps móviles</h3>
+                <p>Apps para vender y operar: pedidos, catálogo, seguimiento, reportes y flujos internos.</p>
+              </div>
+            </div>
+            <ul class="serviceList">
+              <li><b>API REST</b> + auth + roles</li>
+              <li><b>Push</b> + tracking</li>
+              <li><b>Panel admin</b> / backoffice</li>
             </ul>
+            <div class="service__actions">
+              <button class="btn btn--ghost btn--sm" type="button" data-open-service="apps">Ver detalle</button>
+              <a class="btn btn--sm" href="#contacto">Cotizar</a>
+            </div>
           </article>
 
-          <article class="service">
-            <div class="service__icon" aria-hidden="true">⚙</div>
-            <h3>Sistemas empresariales</h3>
-            <p>Integraciones, paneles, automatización, inventarios, ventas, facturación y reportes.</p>
-            <ul class="bullets">
-              <li>Software a la medida</li>
-              <li>Integraciones con ERP</li>
-              <li>Dashboards operativos</li>
+          <article class="service service--systems" data-service="systems">
+            <div class="service__top">
+              <div class="service__icon" aria-hidden="true">⚙</div>
+              <div>
+                <h3>Sistemas empresariales</h3>
+                <p>Automatiza operación y ventas: integraciones, paneles, inventarios, facturación y reportes.</p>
+              </div>
+            </div>
+            <ul class="serviceList">
+              <li><b>Integraciones</b> + webhooks</li>
+              <li><b>ETL/Sync</b> (catálogos, pedidos, clientes)</li>
+              <li><b>Dashboards KPI</b> (ventas/operación)</li>
             </ul>
+            <div class="service__actions">
+              <button class="btn btn--ghost btn--sm" type="button" data-open-service="systems">Ver detalle</button>
+              <a class="btn btn--sm" href="#contacto">Cotizar</a>
+            </div>
           </article>
 
-          <article class="service">
-            <div class="service__icon" aria-hidden="true">✦</div>
-            <h3>Diseño & Branding</h3>
-            <p>Identidad visual, piezas para campañas, presentaciones y contenido para redes.</p>
-            <ul class="bullets">
-              <li>Brand system</li>
-              <li>Plantillas editables</li>
-              <li>Creativos para Ads</li>
+          <article class="service service--design" data-service="design">
+            <div class="service__top">
+              <div class="service__icon" aria-hidden="true">✦</div>
+              <div>
+                <h3>Diseño & Branding</h3>
+                <p>Identidad visual y piezas listas para uso real: campañas, ventas, redes y presentaciones.</p>
+              </div>
+            </div>
+            <ul class="serviceList">
+              <li><b>Brand system</b> + guías</li>
+              <li><b>Plantillas editables</b> (según uso)</li>
+              <li><b>Artes finales</b> para digital e imprenta</li>
             </ul>
+            <div class="service__actions">
+              <button class="btn btn--ghost btn--sm" type="button" data-open-service="design">Ver detalle</button>
+              <a class="btn btn--sm" href="#contacto">Cotizar</a>
+            </div>
           </article>
 
-          <article class="service">
-            <div class="service__icon" aria-hidden="true">▦</div>
-            <h3>Impresión, eventos y stands</h3>
-            <p>Producción integral: impresos, señalética, displays, backings, stands y montaje.</p>
-            <ul class="bullets">
-              <li>Calidad + tiempos</li>
-              <li>Formatos y acabados</li>
-              <li>Logística (según proyecto)</li>
+          <article class="service service--print" data-service="print">
+            <div class="service__top">
+              <div class="service__icon" aria-hidden="true">▦</div>
+              <div>
+                <h3>Impresión, eventos y stands</h3>
+                <p>Producción integral: impresos, señalética, displays, stands y montaje (según proyecto).</p>
+              </div>
+            </div>
+            <ul class="serviceList">
+              <li><b>Preprensa</b> + especificaciones</li>
+              <li><b>Materiales</b> + acabados</li>
+              <li><b>Montaje</b> / logística (si aplica)</li>
             </ul>
+            <div class="service__actions">
+              <button class="btn btn--ghost btn--sm" type="button" data-open-service="print">Ver detalle</button>
+              <a class="btn btn--sm" href="#contacto">Cotizar</a>
+            </div>
           </article>
 
-          <article class="service">
-            <div class="service__icon" aria-hidden="true">▲</div>
-            <h3>Marketing digital</h3>
-            <p>Campañas, contenido, pauta y optimización. Enfocado a ventas, no a likes.</p>
-            <ul class="bullets">
-              <li>Meta / Google Ads</li>
-              <li>Funnels y remarketing</li>
-              <li>Reportes por KPI</li>
+          <article class="service service--mkt" data-service="mkt">
+            <div class="service__top">
+              <div class="service__icon" aria-hidden="true">▲</div>
+              <div>
+                <h3>Marketing digital</h3>
+                <p>Campañas y contenido con foco en ventas: adquisición, remarketing y optimización por KPI.</p>
+              </div>
+            </div>
+            <ul class="serviceList">
+              <li><b>Pixel + GA4</b> + eventos</li>
+              <li><b>CAPI</b> (si aplica) + audiencias</li>
+              <li><b>A/B testing</b> de creativos y landing</li>
             </ul>
+            <div class="service__actions">
+              <button class="btn btn--ghost btn--sm" type="button" data-open-service="mkt">Ver detalle</button>
+              <a class="btn btn--sm" href="#contacto">Cotizar</a>
+            </div>
           </article>
         </div>
       </div>
@@ -353,7 +405,7 @@
 
             <label>
               <span>Mensaje</span>
-              <textarea name="message" rows="5" placeholder="Describe objetivo, fechas, presupuesto aproximado y referencias (si tienes)." required></textarea>
+              <textarea name="message" rows="5" placeholder="Describe objetivo, fechas y referencias (si tienes)." required></textarea>
             </label>
 
             <div class="form__actions">
@@ -365,15 +417,29 @@
           </form>
 
           <aside class="contactCard">
-            <h3>Paquetes típicos</h3>
-            <p class="muted">Elegimos el paquete que más impacto tenga en 30–45 días.</p>
-            <ul class="bullets">
-              <li>Landing + Ads + seguimiento + dashboard</li>
-              <li>Web + SEO + automatización de leads</li>
-              <li>Contenido + pauta + reportes</li>
-              <li>ERP + integraciones + soporte</li>
-            </ul>
+            <h3>Contacto directo</h3>
+            <p class="muted">Cuéntanos objetivo y fechas. Te respondemos con una ruta clara y entregables.</p>
+
+            <div class="contactDirect">
+              <a class="contactDirect__item" href="mailto:contacto@suntram.digital">
+                <span class="contactDirect__k">Email</span>
+                <span class="contactDirect__v">contacto@suntram.digital</span>
+              </a>
+              <a class="contactDirect__item" href="tel:+527297007660">
+                <span class="contactDirect__k">Tel / WhatsApp</span>
+                <span class="contactDirect__v">+52 729 700 7660</span>
+              </a>
+            </div>
+
             <div class="divider"></div>
+            <h4>¿Qué nos ayuda a cotizar rápido?</h4>
+            <ul class="bullets">
+              <li>Objetivo (leads/ventas/operación)</li>
+              <li>Alcance (qué incluye / qué no)</li>
+              <li>Fecha límite y referencias</li>
+              <li>Accesos (dominio, hosting, cuentas de Ads si aplica)</li>
+            </ul>
+
             <p class="tiny">Si ya tienes dominio/hosting, trabajamos sobre tu infraestructura actual.</p>
           </aside>
         </div>
@@ -392,6 +458,192 @@
       </div>
     </div>
   </footer>
+
+  <!-- Service Drawer Modal -->
+  <div class="modal" data-modal hidden>
+    <div class="modal__backdrop" data-modal-close aria-hidden="true"></div>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-label="Detalle de servicio">
+      <div class="modal__head">
+        <div>
+          <div class="modal__kicker" data-modal-kicker>Servicio</div>
+          <h3 class="modal__title" data-modal-title>Detalle</h3>
+        </div>
+        <button class="modal__close" type="button" data-modal-close aria-label="Cerrar">×</button>
+      </div>
+      <div class="modal__body" data-modal-body></div>
+      <div class="modal__foot">
+        <a class="btn" href="#contacto" data-modal-close>Quiero cotizar</a>
+        <a class="btn btn--ghost" href="mailto:contacto@suntram.digital">Email</a>
+        <a class="btn btn--ghost" href="tel:+527297007660">Tel/WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hidden service content for the drawer -->
+  <div class="serviceDetails" hidden>
+    <section data-service-detail="web">
+      <p class="muted">Enfoque: conversión + velocidad + medición. Sin complicaciones.</p>
+      <div class="modalGrid">
+        <div>
+          <h4>Subproductos típicos</h4>
+          <ul class="bullets">
+            <li>Landing de conversión (1 oferta)</li>
+            <li>Sitio corporativo multi-sección</li>
+            <li>Landing para campañas (Ads)</li>
+            <li>Blog/SEO (pilares + artículos)</li>
+            <li>Web multi-idioma</li>
+            <li>eCommerce (catálogo + pago)</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Entregables frecuentes</h4>
+          <ul class="bullets">
+            <li>Arquitectura (secciones) + wireframe</li>
+            <li>Diseño visual + componentes</li>
+            <li>Responsive + accesibilidad básica</li>
+            <li>Integración WhatsApp / formulario / email</li>
+            <li>Medición: GA4, GTM, Pixel, eventos y conversiones</li>
+          </ul>
+        </div>
+      </div>
+      <h4>Integraciones comunes</h4>
+      <ul class="bullets">
+        <li>WhatsApp (click-to-chat), formularios, Calendly</li>
+        <li>CRM (HubSpot / Zoho / Pipedrive) o Google Sheets</li>
+        <li>Mailchimp / Brevo / Email marketing</li>
+      </ul>
+    </section>
+
+    <section data-service-detail="apps">
+      <p class="muted">Apps con enfoque a operación/ventas: flujos claros, backend sólido e integraciones.</p>
+      <div class="modalGrid">
+        <div>
+          <h4>Subproductos típicos</h4>
+          <ul class="bullets">
+            <li>App catálogo + carrito (cotización/compra)</li>
+            <li>App de pedidos y logística</li>
+            <li>App interna para fuerza de ventas</li>
+            <li>App de membresías / suscripción</li>
+            <li>App para reportes operativos</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Entregables frecuentes</h4>
+          <ul class="bullets">
+            <li>UX: flujos, pantallas y estados</li>
+            <li>Auth + roles (si aplica)</li>
+            <li>Notificaciones push</li>
+            <li>Panel admin / backoffice</li>
+            <li>Integraciones: pagos, WhatsApp, CRM, Sheets</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section data-service-detail="systems">
+      <p class="muted">Automatización e integraciones para que tu operación sea medible y escalable.</p>
+      <div class="modalGrid">
+        <div>
+          <h4>Subproductos típicos</h4>
+          <ul class="bullets">
+            <li>CRM/pipeline de ventas</li>
+            <li>Inventarios + pedidos + logística</li>
+            <li>Portales (clientes/proveedores)</li>
+            <li>Integraciones ERP (Odoo/Oracle)</li>
+            <li>Automatizaciones (workflows) y notificaciones</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Entregables frecuentes</h4>
+          <ul class="bullets">
+            <li>Levantamiento de procesos + requisitos</li>
+            <li>Implementación modular + roles</li>
+            <li>Integración con herramientas (correo, WhatsApp, BI)</li>
+            <li>Dashboard KPI (ventas/operación)</li>
+            <li>Documentación + handoff</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section data-service-detail="design">
+      <p class="muted">Diseño que se usa en la realidad: marca consistente + piezas listas para vender.</p>
+      <div class="modalGrid">
+        <div>
+          <h4>Subproductos típicos</h4>
+          <ul class="bullets">
+            <li>Logo / refresh de marca</li>
+            <li>Brandbook (uso, colores, tipografías)</li>
+            <li>Plantillas para redes (IG/FB/LinkedIn)</li>
+            <li>Pitch deck / presentación comercial</li>
+            <li>Creativos para Ads (variantes)</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Entregables frecuentes</h4>
+          <ul class="bullets">
+            <li>Assets exportables (SVG/PNG/PDF)</li>
+            <li>Kit de iconografía + recursos</li>
+            <li>Plantillas editables (según caso)</li>
+            <li>Artes finales para imprenta/digital</li>
+            <li>Versiones por formato (feed/story/banner)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section data-service-detail="print">
+      <p class="muted">Producción integral con control de calidad y tiempos claros (según proyecto).</p>
+      <div class="modalGrid">
+        <div>
+          <h4>Subproductos típicos</h4>
+          <ul class="bullets">
+            <li>Lonas, viniles, etiquetas, rotulación</li>
+            <li>Señalética interior/exterior</li>
+            <li>Backings, roll-ups y displays</li>
+            <li>Stands (diseño + producción)</li>
+            <li>Activaciones y montaje</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Entregables frecuentes</h4>
+          <ul class="bullets">
+            <li>Artes finales por medidas</li>
+            <li>Selección de material y acabados</li>
+            <li>Producción + control de calidad</li>
+            <li>Entrega/instalación (si aplica)</li>
+            <li>Checklist de montaje</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section data-service-detail="mkt">
+      <p class="muted">Marketing orientado a KPI: adquisición, remarketing y optimización por datos.</p>
+      <div class="modalGrid">
+        <div>
+          <h4>Subproductos típicos</h4>
+          <ul class="bullets">
+            <li>Campañas Meta (FB/IG) y Google Ads</li>
+            <li>Remarketing + audiencias</li>
+            <li>Contenido mensual (diseño/copy)</li>
+            <li>Email/WhatsApp nurturing (según flujo)</li>
+            <li>Optimización de funnel (landing + seguimiento)</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Entregables frecuentes</h4>
+          <ul class="bullets">
+            <li>Setup: Pixel/CAPI (si aplica), GA4, eventos</li>
+            <li>Creativos + copies + pruebas A/B</li>
+            <li>Reporte por KPI (semanal/quincenal)</li>
+            <li>Recomendaciones accionables</li>
+            <li>Dashboard (Looker/Sheets, según caso)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
 
   <script src="script.js"></script>
 </body>
