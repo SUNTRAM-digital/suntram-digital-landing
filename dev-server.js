@@ -45,7 +45,7 @@ function buildSiteJson({ pretty = false } = {}) {
   const ogType = match1(/<meta\s+property="og:type"\s+content="([^"]*)"\s*\/>/i, html);
 
   const brandName = clean(match1(/<span\s+class="brand__word">([\s\S]*?)<\/span>/i, html)) || 'SUNTRAM Digital';
-  const logo = match1(/<img\s+class="brand__logo"\s+src="([^"]+)"/i, html) || 'assets/logo-suntram-digital.jpg';
+  const logo = match1(/<img\s+class="brand__logo"\s+src="([^"]+)"/i, html) || 'assets/logo-suntram.png';
 
   // Nav links (robust extraction)
   const navStart = html.toLowerCase().indexOf('id="nav-links"');

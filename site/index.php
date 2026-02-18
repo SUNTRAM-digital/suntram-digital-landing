@@ -200,7 +200,7 @@ $out = [
     'name' => $brandName !== '' ? $brandName : 'SUNTRAM Digital',
     'title' => $title,
     'description' => $description,
-    'logo' => $logoSrc,
+    'logo' => $logoSrc !== '' ? $logoSrc : 'assets/logo-suntram.png',
     'language' => 'es',
   ],
   'openGraph' => [
